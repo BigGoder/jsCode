@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack/./moduleA.js"],"names":["a","value","console","log"],"mappings":"iHAAA,IAAIA,EAAI,CACJC,MAAM,GAGVC,QAAQC,IAAI,S","file":"moduleA.js","sourcesContent":["let a = {\r\n    value:5\r\n}\r\n\r\nconsole.log('xsa');\r\nexport {a}\r\n"],"sourceRoot":""}
