@@ -8,12 +8,24 @@ export default class MyVue{
      * **/
     constructor(vm){
         this.$vm = vm
-        new Compile(this.$vm)
+        new Compile(this,this.$vm)
+        this.mounted(vm.data)
+        this.mounted(vm.methods)
     }
 
-    mounted(){
-        Object.keys(this.$vm).forEach(e=>{
-            Object.defineProperty(this,e,)
+    mounted(data){
+        Object.keys(data).forEach(e=>{
+            Object.defineProperty(this,e,{
+                enumerable:true,
+                configurable:true,
+                get(){
+                    return data[e]
+                },
+                set(newValue){
+                    if(data[e] == newValue) return
+                    data[e] = newValue
+                }
+            })
         })
     }
 }

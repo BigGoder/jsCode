@@ -6,12 +6,13 @@ const patch = /\{\{(.+?)\}\}/
 
 export default class Compile{
     /**
-     * vm vue实例
-     * el 根元素，
+     * vm vue构造对象
+     * v vue实例根元素，
      * data:数据，
      * methods:方法
      * **/
-     constructor(vm){
+     constructor(v,vm){
+        this.$v = v
         this.$vm = vm;
         this.$el = vm.el;
         this.$data = vm.data;
@@ -69,7 +70,7 @@ export default class Compile{
 
     eventDirective(node,eventName,methodName){
         node.addEventListener(eventName,()=>{
-            this.$methods[methodName].call(this.$data)
+            this.$methods[methodName].call(this.$v)
         })
     }
 
