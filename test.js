@@ -1,6 +1,7 @@
-import '@babel/polyfill'
-
+// import '@babel/polyfill'
 (function(){
-    let arr = Array.from({length:5},(ele,index)=>{index *5})
-    console.log('arr',arr);
+   let a = Array(3).map((e)=>{
+       return e
+   })
+   console.log('a',a);
 })()

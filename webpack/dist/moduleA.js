@@ -1,2 +1,0 @@
-(self.webpackChunkwebpack=self.webpackChunkwebpack||[]).push([[900],{133:(e,s,a)=>{"use strict";a.d(s,{a:()=>c});let c={value:5};console.log("xsa")}},e=>{"use strict";e(e.s=133)}]);
-//# sourceMappingURL=moduleA.js.map
