@@ -1,7 +1,10 @@
 // import '@babel/polyfill'
 (function(){
-   let a = Array(3).map((e)=>{
-       return e
-   })
-   console.log('a',a);
+   let obj ={
+       name:'zzh',
+       age : 18
+   }
+
+   let n = { obj }
+   console.log('n',n);
 })()
