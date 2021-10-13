@@ -19,7 +19,7 @@
 ## 编译babel
 #### bebel转化为commonjs规范，但是浏览器还是不认识，此时需要webpack转化为浏览器认识的js代码块
 ## tree shaking工作原理（主要成功原因就是es6引入了静态导入）
-## bundle和chunk  chunk是进行时  bundle有chunk产生
+## bundle和chunk  chunk是进行时  bundle由chunk产生
 ## loader
 ### style-loader css添加到内联标签style里面
 ### file-loader 文件路径转化为正确的绝对路径

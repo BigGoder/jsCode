@@ -4,8 +4,8 @@ class BinaryTree{
 
     }
 
-    add(value){
-        let node = new SNode(value)
+    add(val){
+        let node = new SNode(val)
         if(!this.root){
             this.root = node
             return
@@ -14,10 +14,10 @@ class BinaryTree{
     }
 
     insert(newNode,node){
-        if(newNode.value < node.value){
+        if(newNode.val < node.val){
             if(!node.left){
                 node.left = newNode
-            }else if(node.left.value >newNode.value){
+            }else if(node.left.val >newNode.val){
                 this.insert(newNode,node.left)
             }else{
                 newNode.left = node.left
@@ -26,7 +26,7 @@ class BinaryTree{
         }else{
             if(!node.right){
                 node.right = newNode
-            }else if(node.right.value < newNode.value){
+            }else if(node.right.val < newNode.val){
                 newNode.right = node.right
                 node.right = newNode
             }else{
@@ -41,8 +41,8 @@ class BinaryTree{
 
 class SNode{
 
-    constructor(value){
-        this.value = value
+    constructor(val){
+        this.val = val
         this.left = null
         this.right = null
     }
