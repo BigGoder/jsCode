@@ -114,7 +114,7 @@ Trie.prototype.search = function(word) {
  * @param {string} prefix
  * @return {boolean}
  */
-Trie.prototype.startsWith = function(prefix) {
+Trie.prototype.startsWith = function(word) {
     let node = this.children
     for(const key of word){
         if(!node) break;

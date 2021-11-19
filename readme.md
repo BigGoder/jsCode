@@ -12,7 +12,7 @@
 ## computed的实现 根据dirty是否为true来决定更新
 
 # react
-## 
+## Onclick 直接放进方法bind会造成性能问题
 
 
 # webpack
