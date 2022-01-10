@@ -1,11 +1,15 @@
 {
   "scripts": {
-    "start": "webpack"
+    "start": "webpack",
+    "test": "promises-aplus-tests ./promise/originCode.js"
   },
   "dependencies": {
+    "adm-zip": "^0.5.9",
     "babel-loader": "8.1.0",
     "express": "^4.17.1",
+    "ibili": "^1.1.1",
     "node-xlsx": "^0.16.1",
+    "promises-aplus-tests": "^2.1.2",
     "request": "^2.88.2",
     "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2"
