@@ -1,11 +1,15 @@
-let o = {
-  name:'zzh'
+class Course{
+
+  constructor(){
+    let _counse = '前端'
+    this.course  = ()=>{
+      return _counse
+    }
+  }
+
+
 }
 
-function a(){
-  console.log(this.name);
-}
 
-let b=a.bind(o)
-console.log('o',o);
-console.log('b',b);
+let c = new Course()
+console.log(c.course());

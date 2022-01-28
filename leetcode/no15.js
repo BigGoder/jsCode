@@ -1,54 +1,31 @@
-var threeSum = function(nums) {
-    let result = []
-    let con = {}
-    let ns = nums.sort((a,b)=>(a-b))
-    for(let j =0;j<ns.length;j++){
-        let first = ns[j]
-        let obj = {}
-        for(let i = j+1;i<ns.length;i++){
-            let value = ns[i]
-            let idx = obj[String(0-first - value)]
-            let item = [first,ns[idx],ns[i]]
-            if(idx != undefined && !con[item]){
-                result.push(item)
-                con[item] = 1
-            }
-            obj[String(value)] = i
+var threeSum = function(nums) {//[-1,0,1,2,-1]
+  let result = []
+  let ns = nums.sort((a,b)=>a-b)
+  for(let i = 0;i<ns.length;i++){
+    let value = ns[i]
+    if(ns[i] == ns[i-1])continue
+    let target = 0 - value
+    let left = i+1
+    let right = ns.length-1
+    while(left<right){
+      if(ns[left] +ns[right] >target){
+        right--
+      }else if(ns[left] +ns[right] <target){
+        left++
+      }else{
+        result.push([value,ns[left],ns[right]])
+        left++
+        right--
+        while(ns[left] == ns[left+1]){
+          left++
         }
+        while(ns[right] == ns[right-1]){
+          right--
+        }
+      }
     }
-
-    return result
-
+  }
+  return result
 };
 
-
-var threeSum2 = function(nums){
-    let result = []
-    let con = []
-    let ns = nums.sort((a,b)=>(a-b))
-    let last = -Infinity
-    for(let j =0;j<ns.length;j++){
-        let first = ns[j]
-        
-        if(first == last) continue
-        console.log('xxx');
-        last = first
-        let obj = {}
-        for(let i = j+1;i<ns.length;i++){
-            let value = ns[i]
-            let idx = obj[String(0-first - value)]
-            // let item = [first,ns[idx],ns[i]]
-            // let itemStr = item.join('')
-            if(idx != undefined){
-                result.push([first,ns[idx],ns[i]])
-                // con.push(itemStr)
-            }
-            obj[String(value)] = i
-        }
-    }
-
-    return result
-
-};
-
-console.log('r',threeSum([-1,0,1,2,-1,-4]));
+console.log('r',threeSum([-1,0,1,2,-1]));

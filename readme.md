@@ -26,7 +26,7 @@
 ### url-loader 处理图片的
 ### postcss-lader 把css转化为低版本，各种浏览器兼容的样式 
 ## plugins
-### htmlwebpackplugins 打成html文件 并把js放入
+### htmlwebpackplugins  打成html文件 并把js放入 copy-webpack-plugin 打包后引入外部链接
 ### cleanwebpackplugins 每次打包自动删除前面的包
 ### SplitChunksPlugin 代码分割分批加载
 ### mini-css-extract-plugin 把css打包到单独的模块而不是放在style里面
